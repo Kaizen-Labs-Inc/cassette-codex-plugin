@@ -53,16 +53,34 @@ cassette auth login --token YOUR_TOKEN --base-url https://cassette.sh
 
 ## Install
 
-Home-local install:
+Recommended install:
 
 ```bash
-mkdir -p ~/.agents/plugins
-mkdir -p ~/plugins
-cp -R plugins/cassette ~/plugins/cassette
-cp .agents/plugins/marketplace.json ~/.agents/plugins/marketplace.json
+git clone https://github.com/Kaizen-Labs-Inc/cassette-codex-plugin.git
+cd cassette-codex-plugin
+./scripts/install.sh
 ```
 
-If the user already has a `~/.agents/plugins/marketplace.json`, merge the `cassette` entry instead of overwriting the file.
+What the installer does:
+
+- copies the plugin to `~/plugins/cassette`
+- creates or updates `~/.agents/plugins/marketplace.json`
+- preserves other marketplace entries instead of overwriting them
+- checks whether the `cassette` CLI is available on `PATH`
+
+If `cassette` is missing, install it with:
+
+```bash
+brew tap Kaizen-Labs-Inc/cassette
+brew install cassette
+```
+
+Then authenticate:
+
+```bash
+cassette auth login --token YOUR_TOKEN --base-url https://cassette.sh
+cassette auth whoami
+```
 
 ## Usage
 
@@ -81,4 +99,10 @@ Test the wrapper:
 
 ```bash
 plugins/cassette/scripts/cassette-cli.sh help
+```
+
+Test the installer:
+
+```bash
+./scripts/install.sh
 ```
