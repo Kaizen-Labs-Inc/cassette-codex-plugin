@@ -1,0 +1,43 @@
+{
+  "name": "cassette",
+  "version": "0.1.0",
+  "description": "Operate Cassette instances from Codex through the installed Cassette CLI and repo-local skills.",
+  "author": {
+    "name": "Cassette",
+    "email": "hello@cassette.dev",
+    "url": "https://cassette.sh"
+  },
+  "homepage": "https://cassette.sh",
+  "repository": "https://github.com/Kaizen-Labs-Inc/cassette-codex-plugin",
+  "license": "MIT",
+  "keywords": [
+    "cassette",
+    "infrastructure",
+    "vps",
+    "server-management",
+    "cli",
+    "codex-plugin"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Cassette",
+    "shortDescription": "Manage Cassette instances from Codex",
+    "longDescription": "Operate Cassette infrastructure from Codex using the installed Cassette CLI and repo-local skills for instances, logs, metrics, backups, schedules, containers, and SSH key workflows.",
+    "developerName": "Cassette",
+    "category": "Infrastructure",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://cassette.sh",
+    "privacyPolicyURL": "https://cassette.sh/privacy",
+    "termsOfServiceURL": "https://cassette.sh/terms",
+    "defaultPrompt": [
+      "List my Cassette instances and summarize their health.",
+      "Show recent logs and metrics for a Cassette instance.",
+      "Create a backup or schedule a reboot for an instance."
+    ],
+    "brandColor": "#1F7A8C",
+    "screenshots": []
+  }
+}
