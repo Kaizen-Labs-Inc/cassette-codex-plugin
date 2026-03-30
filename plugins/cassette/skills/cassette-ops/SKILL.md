@@ -51,4 +51,6 @@ plugins/cassette/scripts/cassette-cli.sh ssh-keys assign INSTANCE_ID SSH_KEY_ID 
 ## Notes
 
 - The CLI usually needs prior authentication with `auth login --token ...`.
+- If the user is not authenticated, explain how to get a token from the Cassette web app: Settings or gear menu -> API Keys -> create key -> copy token, then run `cassette auth login --token YOUR_TOKEN --base-url https://cassette.sh`.
+- If the CLI is pointed at `http://127.0.0.1:3000`, explain that this is usually leftover local development config and instruct the user to re-run `cassette auth login` with the production base URL.
 - If the CLI is missing, instruct the user to install it before continuing.

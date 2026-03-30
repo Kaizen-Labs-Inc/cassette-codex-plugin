@@ -26,6 +26,31 @@ cassette auth whoami
 
 If a packaged install of `cassette` is broken in the user's environment, pointing `CASSETTE_BIN` at a known-good binary is the intended escape hatch.
 
+## Getting an API token
+
+The Cassette CLI authenticates with an organization-scoped API token.
+
+In the Cassette web app:
+
+1. Open the gear/settings area.
+2. Go to **API Keys**.
+3. Create a new key.
+4. Copy the token when it is shown. You will not be able to see the raw token again later.
+
+Then log in from the CLI:
+
+```bash
+cassette auth login --token YOUR_TOKEN --base-url https://cassette.sh
+cassette auth whoami
+```
+
+If `cassette auth whoami` shows `http://127.0.0.1:3000` errors, the CLI is still pointed at a local development server. Log out and authenticate again against production:
+
+```bash
+cassette auth logout
+cassette auth login --token YOUR_TOKEN --base-url https://cassette.sh
+```
+
 ## Install
 
 Home-local install:
