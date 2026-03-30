@@ -22,7 +22,7 @@
   "interface": {
     "displayName": "Cassette",
     "shortDescription": "Manage Cassette instances from Codex",
-    "longDescription": "Operate Cassette infrastructure from Codex using the installed Cassette CLI and repo-local skills for instances, logs, metrics, backups, schedules, containers, and SSH key workflows.",
+    "longDescription": "Manage Cassette infrastructure from Codex using the installed Cassette CLI and repo-local skills for instances, logs, metrics, backups, schedules, containers, and SSH key workflows.",
     "developerName": "Cassette",
     "category": "Infrastructure",
     "capabilities": [
@@ -38,6 +38,8 @@
       "Create a backup or schedule a reboot for an instance."
     ],
     "brandColor": "#1F7A8C",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png",
     "screenshots": []
   }
 }
